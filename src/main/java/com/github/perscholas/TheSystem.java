@@ -36,7 +36,9 @@ public abstract class TheSystem {
 			item.setQuantity(item.getQuantity() +1);
 			return true;
 		}
+		else
 		itemCollection.put(item.getItemName(),item);
+
 		return true;
 	}
 
@@ -53,7 +55,7 @@ public abstract class TheSystem {
 	}
 
 	public HashMap<String,Item> createCollection() throws IOException {
-    	HashMap<String,Item> tempMap = new HashMap<String, Item>();
+    	HashMap<String,Item> tempMap = new HashMap<>();
     	File file = new File("src/main/resources/sample.txt");
     	ArrayList<String[]> builder = new ArrayList<>();
     	Files.lines(file.toPath()).forEach(line -> builder.add(line.split("  ")));
