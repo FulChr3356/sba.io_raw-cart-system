@@ -36,7 +36,6 @@ public abstract class TheSystem {
 			item.setQuantity(item.getQuantity() +1);
 			return true;
 		}
-		else
 		itemCollection.put(item.getItemName(),item);
 
 		return true;
